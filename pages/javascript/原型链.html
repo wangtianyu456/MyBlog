@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript 中的原型链机制 | Blog</title>
+    <meta name="description" content="前端博客,javascript,vue,webpack">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="./public/mountain.jpg">
+  <meta name="baidu-site-verification" content="uwBGQFFodQ">
+    
+    <link rel="preload" href="/assets/css/0.styles.20ee517c.css" as="style"><link rel="preload" href="/assets/js/app.cfce4133.js" as="script"><link rel="preload" href="/assets/js/2.ab4833b6.js" as="script"><link rel="preload" href="/assets/js/4.df961f20.js" as="script"><link rel="prefetch" href="/assets/js/10.2277891f.js"><link rel="prefetch" href="/assets/js/11.83443278.js"><link rel="prefetch" href="/assets/js/12.2f3c3c8b.js"><link rel="prefetch" href="/assets/js/13.efdf1f08.js"><link rel="prefetch" href="/assets/js/14.c1630924.js"><link rel="prefetch" href="/assets/js/15.bb4ddf77.js"><link rel="prefetch" href="/assets/js/16.0c8dc3c9.js"><link rel="prefetch" href="/assets/js/17.23365e01.js"><link rel="prefetch" href="/assets/js/18.866058ec.js"><link rel="prefetch" href="/assets/js/19.5bd02f07.js"><link rel="prefetch" href="/assets/js/20.b3552efd.js"><link rel="prefetch" href="/assets/js/21.c10f14fa.js"><link rel="prefetch" href="/assets/js/3.3d9f9b44.js"><link rel="prefetch" href="/assets/js/5.69cf762a.js"><link rel="prefetch" href="/assets/js/6.a5dec89d.js"><link rel="prefetch" href="/assets/js/7.9b99fb9e.js"><link rel="prefetch" href="/assets/js/8.e1729816.js"><link rel="prefetch" href="/assets/js/9.fe31188b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.20ee517c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link router-link-active">
+  js原理系列
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/vue/进阶/" class="nav-link">
+  Vue进阶
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vue/原理系列/" class="nav-link">
+  Vue原理系列
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/其他/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/wangtianyu456" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link router-link-active">
+  js原理系列
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/vue/进阶/" class="nav-link">
+  Vue进阶
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vue/原理系列/" class="nav-link">
+  Vue原理系列
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/其他/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/wangtianyu456" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>javascript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/javascript/call、apply、bind解析.html" class="sidebar-link">call、apply、bind解析</a></li><li><a href="/pages/javascript/函数式编程之函数柯里化curry.html" class="sidebar-link">函数式编程之函数柯里化curry</a></li><li><a href="/pages/javascript/原型链.html" class="active sidebar-link">原型链</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/javascript/原型链.html#javascript-中的原型链规律" class="sidebar-link">JavaScript 中的原型链规律</a></li><li class="sidebar-sub-header"><a href="/pages/javascript/原型链.html#例子-1" class="sidebar-link">例子 1</a></li></ul></li><li><a href="/pages/javascript/实现instanceof.html" class="sidebar-link">实现instanceof</a></li><li><a href="/pages/javascript/实现new.html" class="sidebar-link">实现new</a></li><li><a href="/pages/javascript/数组拍平.html" class="sidebar-link">数组拍平</a></li><li><a href="/pages/javascript/防抖与节流.html" class="sidebar-link">防抖与节流</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript-中的原型链机制"><a href="#javascript-中的原型链机制" class="header-anchor">#</a> JavaScript 中的原型链机制</h1> <p>众所周知 JavaScript 中的继承是基于原型链的委托机制来实现的，现在我们通过从头开始绘制原型链的示意图来真正理解原型链的继承是如何实现的</p> <h2 id="javascript-中的原型链规律"><a href="#javascript-中的原型链规律" class="header-anchor">#</a> JavaScript 中的原型链规律</h2> <ol><li>对象类型有一个属性 <code>__proto__</code> ，指向他的所属类的原型对象</li> <li>函数类型有一个属性 <code>prototype</code> ，指向它自身的原型对象</li> <li>原型对象中有一个属性 <code>constructor</code> ，指向它所属的构造函数</li></ol> <p>接下来我们通过例子画图来解释这三句话</p> <h2 id="例子-1"><a href="#例子-1" class="header-anchor">#</a> 例子 1</h2> <p>我们通过<code>Array</code>构造函数来绘制一下<code>arr</code>的原型链</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>按照原型链规律我们可以得到</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// arr 是一个数组，数组就是对象的一种类型，因此它的__proto__就指向所属类，也就是Array类的原型对象</span>
+arr<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+
+<span class="token comment">// Array的原型对象上有constructor指向它原本的构造函数</span>
+<span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Array<span class="token punctuation">;</span>
+
+<span class="token comment">// Array()既是函数也是对象类型，所以Array上还有一个属性__proto__，指向它所属类的原型，也就是Function类的原型</span>
+Array<span class="token punctuation">.</span>__proro__ <span class="token operator">=</span> <span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+
+<span class="token comment">// Array.prototype是一个对象，所以它的__proto__指向Object.prototype</span>
+<span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>根据以上分析，当前我们得到的原型链图如下
+<img src="/assets/img/prototype_1.9e5c19be.png" alt="原型_1"></p> <p>接着我们继续分析</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同理Object.prototype和Object的关系是一样的</span>
+<span class="token comment">// 有一点不同的是Object.prototype就是原型链的最顶层了，所以</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 接着Array()是函数所以也属于Function类，因此</span>
+Array<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+
+<span class="token comment">// Object()同理，也是同时属于Function类</span>
+Object<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>于是我们基于此画出了完整的原型链继承图</p> <p><img src="/assets/img/prototype_2.373f8fd7.png" alt="原型_2"></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/12/2020, 3:53:53 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/javascript/函数式编程之函数柯里化curry.html" class="prev">
+        函数式编程之函数柯里化curry
+      </a></span> <span class="next"><a href="/pages/javascript/实现instanceof.html">
+        实现instanceof
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.cfce4133.js" defer></script><script src="/assets/js/2.ab4833b6.js" defer></script><script src="/assets/js/4.df961f20.js" defer></script>
+  </body>
+</html>

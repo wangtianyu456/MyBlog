@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>根据目录自动生成 sidebar 配置 | Blog</title>
+    <meta name="description" content="前端博客,javascript,vue,webpack">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="./public/mountain.jpg">
+  <meta name="baidu-site-verification" content="uwBGQFFodQ">
+    
+    <link rel="preload" href="/assets/css/0.styles.20ee517c.css" as="style"><link rel="preload" href="/assets/js/app.cfce4133.js" as="script"><link rel="preload" href="/assets/js/2.ab4833b6.js" as="script"><link rel="preload" href="/assets/js/20.b3552efd.js" as="script"><link rel="prefetch" href="/assets/js/10.2277891f.js"><link rel="prefetch" href="/assets/js/11.83443278.js"><link rel="prefetch" href="/assets/js/12.2f3c3c8b.js"><link rel="prefetch" href="/assets/js/13.efdf1f08.js"><link rel="prefetch" href="/assets/js/14.c1630924.js"><link rel="prefetch" href="/assets/js/15.bb4ddf77.js"><link rel="prefetch" href="/assets/js/16.0c8dc3c9.js"><link rel="prefetch" href="/assets/js/17.23365e01.js"><link rel="prefetch" href="/assets/js/18.866058ec.js"><link rel="prefetch" href="/assets/js/19.5bd02f07.js"><link rel="prefetch" href="/assets/js/21.c10f14fa.js"><link rel="prefetch" href="/assets/js/3.3d9f9b44.js"><link rel="prefetch" href="/assets/js/4.df961f20.js"><link rel="prefetch" href="/assets/js/5.69cf762a.js"><link rel="prefetch" href="/assets/js/6.a5dec89d.js"><link rel="prefetch" href="/assets/js/7.9b99fb9e.js"><link rel="prefetch" href="/assets/js/8.e1729816.js"><link rel="prefetch" href="/assets/js/9.fe31188b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.20ee517c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link">
+  js原理系列
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/vue/进阶/" class="nav-link">
+  Vue进阶
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vue/原理系列/" class="nav-link">
+  Vue原理系列
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/其他/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/wangtianyu456" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link">
+  js原理系列
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/vue/进阶/" class="nav-link">
+  Vue进阶
+</a></li><li class="dropdown-item"><!----> <a href="/pages/vue/原理系列/" class="nav-link">
+  Vue原理系列
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/其他/" class="nav-link">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/wangtianyu456" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>其他</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/其他/根据目录自动生成sidebar.html" class="active sidebar-link">根据目录自动生成sidebar</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/其他/根据目录自动生成sidebar.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/pages/其他/根据目录自动生成sidebar.html#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/pages/其他/根据目录自动生成sidebar.html#sidebarconfig的结构" class="sidebar-link">sidebarConfig的结构</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="根据目录自动生成-sidebar-配置"><a href="#根据目录自动生成-sidebar-配置" class="header-anchor">#</a> 根据目录自动生成 sidebar 配置</h1> <p>在以 vuepress 来写文档的时候，我们经常会需要在 pages 下新建目录，新建文件，然后到 config.js 下去配置当前的目录与文件，如果每次新增页面都这样来配置，未免太过于麻烦，因此写一个工具来根据 pages 文件下的目录和文件自动生成 sidebar 配置</p> <div class="custom-block warning"><p class="custom-block-title">提醒</p> <p>目前只支持 pages 目录下的文件，而且目前只能生成<code>sidebar</code>,<code>nav</code>暂时不能</p></div> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> vuepress-generatesidebar -D
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <p>在<code>config.js</code>里</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// config.js</span>
+<span class="token keyword">const</span> generateSidebarConfig <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;vuepress-generatesidebar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * generateSidebarConfig 接受三个参数
+ * @param pagesDirPath 指的是pages目录的路径
+ * @param exclude 指的是你要排除在外的目录名单
+ * @param options 指的是你对sidebar中的其他额外配置，具体配置参照vuepress文档
+ */</span>
+
+<span class="token keyword">const</span> pagesDirPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;../pages&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> exclude <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;.DS_Store&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;assets&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+  collapsable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> sidebarConfig <span class="token operator">=</span> <span class="token function">generateSidebarConfig</span><span class="token punctuation">(</span>pagesDirPath<span class="token punctuation">,</span> exclude<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">&quot;your-website&quot;</span><span class="token punctuation">,</span>
+  description<span class="token operator">:</span> <span class="token string">&quot;website&quot;</span><span class="token punctuation">,</span>
+  base<span class="token operator">:</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span>
+  markdown<span class="token operator">:</span> <span class="token punctuation">{</span>
+    lineNumbers<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// ...</span>
+  sidebar<span class="token operator">:</span> sidebrConfig<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><h2 id="sidebarconfig的结构"><a href="#sidebarconfig的结构" class="header-anchor">#</a> <code>sidebarConfig</code>的结构</h2> <p>最终生成的<code>sidebarConfig</code>的结构</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> sidebarConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;/pages/javascript&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      title<span class="token operator">:</span> <span class="token string">&quot;javascript&quot;</span><span class="token punctuation">,</span>
+      collapsable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&quot;javascript原型链.md&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;javascript原型链&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/13/2020, 1:45:56 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.cfce4133.js" defer></script><script src="/assets/js/2.ab4833b6.js" defer></script><script src="/assets/js/20.b3552efd.js" defer></script>
+  </body>
+</html>
